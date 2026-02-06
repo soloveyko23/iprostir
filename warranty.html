@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<style data-preloader="false" rel="preload">
+			body > *:not(.preloader) {opacity: 0;visibility: hidden;}[data-preloader-loaded] body > *:not(.preloader) {transition: opacity 0.5s ease 0s;opacity: 1;visibility: visible;}
+		</style>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preload" href="data:font/woff2;base64,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" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.js?v=1770379545336delivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css?v=1770379545336">
+		<link rel="shortcut icon" href="assets/img/favicon.ico">
+		<title>Гарантии</title>
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1770379545336"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1770379545336">
+		<link rel="stylesheet" crossorigin="" href="./css/warranty.min.css?v=1770379545336">
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="site-notice">
+				<div class="site-notice__container">
+					<p class="site-notice__text">
+						Увага! У період з 28 липня по 4 серпня наш магазин не буде працювати офлайн. 
+						Онлайн-замовлення приймаються цілодобово, обробка та відправлення відбуватиметься 5 та 6 серпня.
+						Якщо вам потрібна додаткова інформація, будь ласка, пишіть нам у Viber або Telegram.
+					</p>
+				</div>
+			</div>
+			<header data-header="" class="header">
+				<!-- Верхняя плашка -->
+				<div class="header__top">
+					<div class="header__container">
+						<div class="header__top-content">
+							<div class="header__working-hours">Время работы: Пн-Пт. 09:00-18:00, Сб. 09:00-15:00, Вс. выходной</div>
+							<div class="header__language" data-dynamic=".header-menu__top, 991, last">
+								<div data-dropdown="" class="header__dropdown">
+									<div data-dropdown-toggle="" class="header__dropdown-toggle">
+										RU
+										<span class="header__dropdown-arrow _icon-arrow-dropdown-bottom"></span>
+									</div>
+									<div data-dropdown-menu="" class="header__dropdown-menu">
+										<a href="#" data-value="ru">RU</a>
+										<a href="#" data-value="en">EN</a>
+										<a href="#" data-value="ua">UA</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Основная навигация -->
+				<div class="header__main">
+					<div class="header__container">
+						<div class="header__content">
+							<div class="header__button-menu">
+								<!-- Мобильное меню -->
+								<button type="button" data-menu="" class="header__menu-icon icon-menu">
+									<span></span>
+								</button>
+							</div>
+							<div class="header__logo">
+								<a href="#" class="header__logo-link">
+									<picture>
+										<source srcset="./assets/img/logo-white.png" media="(max-width: 991.98px)">
+										<img src="./assets/img/logo.png" alt="Logo">
+									</picture>
+									<div class="header__logo-tagline">
+										Кабели и аксессуары
+										<span class="blue">для аудио</span>
+										<span class="red">и видео</span>
+									</div>
+								</a>
+							</div>
+							<div class="header__menu menu">
+								<!-- Основная навигация -->
+								<nav class="menu__body">
+									<div class="menu__header header-menu">
+										<div class="header-menu__top">
+											<div class="header-mobile__logo">
+												<a href="#" class="header-mobile__logo-link">
+													<picture>
+														<source srcset="./assets/img/logo-white.png" media="(max-width: 991.98px)">
+														<img src="./assets/img/logo.png" alt="Logo">
+													</picture>
+													<div class="header-mobile__logo-tagline">
+														Кабели и аксессуары
+														<span class="blue">для аудио</span>
+														<span class="red">и видео</span>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="header-menu__bottom"></div>
+									</div>
+									<ul class="menu__list">
+										<li>
+											<button type="button" class="button button-catalog-primary catalog-menu__toggle">
+												<span class="_icon-grid"></span>
+												Каталог товаров
+											</button>
+										</li>
+										<li class="menu__item">
+											<a href="brands.html" class="menu__link">Аудиобренды</a>
+										</li>
+										<li class="menu__item">
+											<a href="news.html" class="menu__link">Новости</a>
+										</li>
+										<li class="menu__item">
+											<a href="price.html" class="menu__link">Прайс</a>
+										</li>
+										<li class="menu__item">
+											<a href="reviews.html" class="menu__link">Отзывы</a>
+										</li>
+										<li class="menu__item">
+											<a href="payment.html" class="menu__link">Оплата и доставка</a>
+										</li>
+										<li class="menu__item">
+											<a href="special-offers.html" class="menu__link">Спецпредложения</a>
+										</li>
+										<li class="menu__item">
+											<a href="contacts.html" class="menu__link">Контакты</a>
+										</li>
+										<li>
+											<a href="#" class="menu__favorites">
+												<div>
+													<span class="_icon-like-heart"></span>
+													<span class="header__badge">2</span>
+												</div>
+												Избранное
+											</a>
+										</li>
+										<li>
+											<a href="#" class="menu__compare">
+												<div>
+													<span class="_icon-sravn"></span>
+													<span class="header__badge">5</span>
+												</div>
+												Сравнение
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div>
+													<span class="_icon-basket_icon"></span>
+												</div>
+												Корзина
+											</a>
+										</li>
+									</ul>
+									<div class="menu__bottom">
+										<div class="menu__callback">
+											<button type="button" class="button button-lg button-primary">Перезвоните мне</button>
+										</div>
+										<div class="menu__footer">
+											<p>
+												Время работы: Пн-Пт. 09:00-18:00,
+												<br>
+												Сб. 09:-15:00, Вс. выходной
+											</p>
+										</div>
+									</div>
+									<!-- Кнопка обратного звонка -->
+								</nav>
+							</div>
+							<!--
+<fetch url="@components/layout/menu/menu.js?v=1770379545336on">
+<each loop='item in response'>
+</each>
+</fetch>
+-->
+							<div class="header__actions">
+								<div class="header__callback">
+									<button type="button" class="button button-lg button-primary">Перезвоните мне</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Нижняя панель с поиском -->
+				<div class="header__bottom">
+					<div class="header__container">
+						<div class="header__bottom-content">
+							<!-- Кнопка каталога -->
+							<button type="button" class="button button-catalog">
+								<span class="_icon-grid"></span>
+								Каталог товаров
+							</button>
+							<div class="header__bottom-actions">
+								<div class="search" data-search="">
+									<input type="text" class="search__input" placeholder="Поиск товаров">
+									<button type="button" class="search__button button button-primary">
+										<span class="_icon-search"></span>
+									</button>
+								</div>
+								<!-- Контакты и действия -->
+								<div class="header__contact-actions">
+									<!-- Телефон -->
+									<div class="header__contact" data-dynamic=".header-menu__bottom, 991, last">
+										<div class="header__contact-icons">
+											<span class="_icon-phone"></span>
+											<span>
+												<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewbox="0 0 22 22" fill="none">
+													<path d="M11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22Z" fill="#6F3FAA"></path>
+													<path d="M17.3537 7.43128V7.41503C17.2062 6.81753 16.8212 6.20003 16.3162 5.68003C15.7262 5.07003 14.975 4.59128 14.2575 4.43628H14.2425C12.1028 4.02629 9.9047 4.02629 7.76499 4.43628H7.74999C6.41749 4.72503 4.97124 6.11753 4.64874 7.41503V7.43128C4.2525 9.23014 4.2525 11.0937 4.64874 12.8925V12.9075C4.87874 13.8325 5.67874 14.805 6.60124 15.3925C6.90251 15.5889 7.23045 15.7408 7.57499 15.8438V17.2913C7.57548 17.407 7.6104 17.5199 7.6753 17.6156C7.7402 17.7114 7.83214 17.7857 7.93941 17.829C8.04667 17.8723 8.16441 17.8827 8.2776 17.8588C8.3908 17.835 8.49432 17.7779 8.57499 17.695L10.0425 16.17C10.36 16.1875 10.68 16.1975 10.9975 16.1975C12.0843 16.1972 13.1687 16.0942 14.2362 15.89H14.2512C15.58 15.6 17.0275 14.2075 17.3475 12.91V12.895C17.7462 11.0958 17.7483 9.23139 17.3537 7.43128ZM16.1925 12.625C15.9775 13.4713 14.88 14.525 14.0062 14.7188C12.8714 14.9362 11.7163 15.0305 10.5612 15C10.55 14.9993 10.5387 15.0012 10.5283 15.0056C10.5179 15.0099 10.5087 15.0166 10.5012 15.025L9.42999 16.125L8.28999 17.2938C8.27176 17.3131 8.24815 17.3264 8.22224 17.3321C8.19633 17.3378 8.16929 17.3356 8.14465 17.3258C8.12 17.316 8.09888 17.299 8.084 17.277C8.06913 17.255 8.0612 17.2291 8.06124 17.2025V14.8025C8.06127 14.7832 8.05453 14.7645 8.0422 14.7497C8.02987 14.7348 8.01272 14.7248 7.99374 14.7213C7.8115 14.678 7.6358 14.6108 7.47124 14.5213C6.72874 14.125 5.97999 13.3125 5.80749 12.625C5.45019 10.999 5.45019 9.3148 5.80749 7.68878C6.02124 6.84628 7.12499 5.79503 7.99249 5.60003C9.97906 5.21992 12.0197 5.21992 14.0062 5.60003C14.4875 5.70753 15.0375 6.07378 15.4675 6.52378C15.8212 6.89003 16.0925 7.31253 16.1925 7.69253C16.5492 9.31735 16.5492 11.0002 16.1925 12.625Z" fill="white"></path>
+													<path d="M14.0375 12.75C13.8751 13.1206 13.5958 13.4279 13.2425 13.625C13.1316 13.6721 13.0165 13.7085 12.8987 13.7338C12.765 13.6938 12.6375 13.6663 12.5237 13.6175C11.5761 13.2488 10.6941 12.7301 9.9112 12.0813C9.67866 11.8829 9.46021 11.6687 9.25745 11.44C8.75675 10.8634 8.33627 10.2217 8.00745 9.5325C7.84745 9.20625 7.71245 8.86875 7.57495 8.5325C7.44995 8.22625 7.63495 7.9075 7.82495 7.67875C8.01093 7.4666 8.23969 7.29621 8.4962 7.17875C8.58646 7.13339 8.68976 7.12105 8.78817 7.14388C8.88657 7.16671 8.97388 7.22327 9.03495 7.30375C9.35432 7.66257 9.63581 8.05339 9.87495 8.47C9.95028 8.59114 9.97608 8.73663 9.94698 8.87628C9.91789 9.01593 9.83614 9.13902 9.7187 9.22C9.6562 9.26375 9.5937 9.31375 9.53995 9.3625C9.48696 9.40174 9.44127 9.44997 9.40495 9.505C9.37361 9.5565 9.3546 9.61455 9.34939 9.67461C9.34419 9.73467 9.35294 9.79513 9.37495 9.85125C9.6162 10.515 9.98245 11.0688 10.53 11.4575C10.7152 11.5885 10.9149 11.698 11.125 11.7837C11.2621 11.8584 11.4163 11.8963 11.5725 11.8938C11.845 11.8613 11.935 11.56 12.125 11.405C12.2122 11.3336 12.3201 11.2922 12.4327 11.287C12.5453 11.2819 12.6565 11.3132 12.75 11.3763C12.9525 11.5013 13.1474 11.6425 13.3425 11.78C13.5353 11.9116 13.721 12.0535 13.8987 12.205C13.9818 12.2654 14.0412 12.3529 14.0665 12.4524C14.0919 12.552 14.0816 12.6572 14.0375 12.75Z" fill="white"></path>
+													<path d="M11.3587 6.76002H11.1987C11.25 6.75753 11.3037 6.76002 11.3587 6.76002Z" fill="white"></path>
+													<path d="M14.1249 10.5063C13.9999 10.5063 13.9386 10.4001 13.9299 10.2838C13.9136 10.0551 13.9011 9.82507 13.8699 9.59757C13.8159 9.21373 13.6822 8.84544 13.4774 8.51632C13.2669 8.17347 12.9868 7.8786 12.6552 7.6508C12.3236 7.42299 11.9479 7.26731 11.5524 7.19382C11.3724 7.16132 11.1886 7.15382 11.0074 7.13507C10.8924 7.12257 10.7411 7.11507 10.7161 6.97257C10.7124 6.9449 10.7146 6.91674 10.7226 6.88999C10.7306 6.86324 10.7443 6.83851 10.7626 6.81744C10.7809 6.79638 10.8036 6.77948 10.829 6.76786C10.8544 6.75624 10.8819 6.75018 10.9099 6.75007C10.9398 6.74835 10.9699 6.74835 10.9999 6.75007C11.5463 6.7547 12.0831 6.894 12.5627 7.15565C13.0424 7.41729 13.4502 7.7932 13.7499 8.25007C13.9865 8.61833 14.1471 9.03014 14.2224 9.46132C14.2699 9.73132 14.2874 10.0088 14.3086 10.2838C14.3129 10.3108 14.3114 10.3383 14.3042 10.3646C14.297 10.391 14.2843 10.4155 14.2669 10.4365C14.2496 10.4575 14.2279 10.4747 14.2034 10.4867C14.1789 10.4987 14.1522 10.5054 14.1249 10.5063Z" fill="white"></path>
+													<path d="M13.4487 9.92257C13.448 9.9597 13.443 9.99661 13.4337 10.0326C13.4228 10.0687 13.401 10.1006 13.3713 10.1239C13.3417 10.1472 13.3055 10.1609 13.2678 10.1629C13.2301 10.165 13.1927 10.1553 13.1607 10.1354C13.1286 10.1154 13.1035 10.0861 13.0887 10.0513C13.075 10.0008 13.0687 9.94862 13.07 9.89632C13.0729 9.61673 13.0176 9.3396 12.9075 9.08257C12.8825 9.02757 12.855 8.97132 12.8237 8.91757C12.6448 8.60916 12.3792 8.3601 12.06 8.20132C11.8674 8.11038 11.6628 8.04725 11.4525 8.01382C11.36 7.99882 11.2675 7.99007 11.175 7.97757C11.1509 7.97636 11.1273 7.97023 11.1057 7.95955C11.0841 7.94886 11.0649 7.93386 11.0493 7.91547C11.0338 7.89707 11.0221 7.87568 11.0151 7.8526C11.0081 7.82953 11.006 7.80527 11.0087 7.78132C11.0087 7.75682 11.0139 7.73261 11.024 7.71026C11.034 7.68791 11.0486 7.66794 11.0669 7.65165C11.0852 7.63536 11.1068 7.62312 11.1301 7.61574C11.1535 7.60836 11.1781 7.606 11.2025 7.60882C11.5695 7.62299 11.9291 7.71682 12.2562 7.88382C12.6557 8.08485 12.9816 8.4068 13.1875 8.80382C13.3034 9.03564 13.3811 9.28469 13.4175 9.54132C13.4242 9.57479 13.4292 9.60858 13.4325 9.64257C13.4387 9.71757 13.4412 9.79257 13.4475 9.88507C13.4475 9.89382 13.4487 9.90507 13.4487 9.92257Z" fill="white"></path>
+													<path d="M12.5924 9.75003C12.5853 9.78172 12.5689 9.81056 12.5453 9.83284C12.5217 9.85512 12.4919 9.86982 12.4599 9.87503H12.4324C12.3914 9.87768 12.3507 9.86692 12.3164 9.84436C12.2822 9.8218 12.2562 9.78869 12.2424 9.75003C12.2346 9.72953 12.2296 9.7081 12.2274 9.68628C12.2208 9.60217 12.2083 9.51862 12.1899 9.43628C12.1527 9.26959 12.058 9.12132 11.9224 9.01753C11.8568 8.97045 11.7837 8.93494 11.7061 8.91253C11.6074 8.88378 11.5036 8.89128 11.4061 8.86753C11.3579 8.85899 11.3151 8.8317 11.287 8.79164C11.2589 8.75158 11.2478 8.70201 11.2561 8.65378C11.2654 8.60759 11.2913 8.56637 11.3288 8.53784C11.3663 8.50931 11.4129 8.49542 11.4599 8.49878C12.0324 8.54003 12.4599 8.81503 12.5699 9.42878C12.5812 9.48576 12.5891 9.54336 12.5936 9.60128C12.6006 9.65065 12.6002 9.70079 12.5924 9.75003Z" fill="white"></path>
+												</svg>
+											</span>
+										</div>
+										<a href="tel:0507034224" class="header__phone">050 703 4224</a>
+									</div>
+									<!-- Viber -->
+									<div class="header__bottom-actions-compare">
+										<!-- Сравнение -->
+										<a href="#" class="header__compare">
+											<span class="_icon-sravn"></span>
+											<span class="header__badge">5</span>
+										</a>
+										<!-- Избранное -->
+										<a href="#" class="header__favorites">
+											<span class="_icon-like-heart"></span>
+											<span class="header__badge">2</span>
+										</a>
+										<!-- Профиль -->
+										<a href="#" class="header__profile" data-popup-link="auth" data-dynamic=".header-menu__bottom, 991, first">
+											<span class="_icon-icon-account"></span>
+											<span class="header__username">Сергей</span>
+										</a>
+									</div>
+									<!-- Корзина -->
+									<div class="header__cart" data-cart="" data-dynamic=".header__actions, 991, last">
+										<a href="#" class="header__cart-trigger" data-cart-trigger="">
+											<div class="header__cart-trigger-icon">
+												<span class="_icon-basket_icon"></span>
+											</div>
+											<div class="header__cart-text">
+												<div>Корзина</div>
+												<div data-cart-total-items="">0 товаров</div>
+											</div>
+										</a>
+										<!-- Дропдаун корзины -->
+										<div class="header__cart-dropdown" data-cart-dropdown="">
+											<div class="header__cart-items" data-cart-items="">
+												<!-- Товар 1 -->
+												<div class="header__cart-item" data-cart-item="1">
+													<a href="#" class="header__cart-item-image">
+														<img src="./assets/img/products/01.png" alt="Aacoustic Revive R AUL-PL 1.0 m">
+													</a>
+													<div class="header__cart-item-info">
+														<a href="#" class="header__cart-item-name">Aacoustic Revive R AUL-PL 1.0 m</a>
+														<div class="header__cart-item-details">
+															<span class="header__cart-item-quantity">1 шт</span>
+															<div class="header__cart-item-prices">
+																<span class="header__cart-item-old-price">7 200 грн</span>
+																<span class="header__cart-item-current-price">5 750 грн</span>
+															</div>
+														</div>
+													</div>
+													<button type="button" class="header__cart-item-remove" data-cart-remove="1">
+														<span class="_icon-cross"></span>
+													</button>
+												</div>
+												<!-- Товар 2 -->
+												<div class="header__cart-item" data-cart-item="2">
+													<a href="#" class="header__cart-item-image">
+														<img src="./assets/img/products/02.png" alt="Clearaudio Speed Light Source">
+													</a>
+													<div class="header__cart-item-info">
+														<a href="#" class="header__cart-item-name">Clearaudio Speed Light Source & Stroboscope Testrecord Set витрин</a>
+														<div class="header__cart-item-details">
+															<span class="header__cart-item-quantity">1 шт</span>
+															<div class="header__cart-item-prices">
+																<span class="header__cart-item-old-price">7 200 грн</span>
+																<span class="header__cart-item-current-price">5 750 грн</span>
+															</div>
+														</div>
+													</div>
+													<button type="button" class="header__cart-item-remove" data-cart-remove="2">
+														<span class="_icon-cross"></span>
+													</button>
+												</div>
+											</div>
+											<div class="header__cart-footer">
+												<div class="header__cart-total">
+													<span>Итого:</span>
+													<span data-cart-total-price="">11 500грн</span>
+												</div>
+												<button type="button" class="button button-md button-primary button--checkout" data-cart-checkout="">Оформить заказ</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Поиск -->
+						</div>
+					</div>
+				</div>
+				<div class="header__subcategories">
+					<div class="catalog-menu" data-catalog-menu="">
+						<div class="catalog-menu__categories">
+							<!-- Кнопка "Назад к меню" -->
+							<div class="catalog-menu__back-to-menu">
+								<button type="button" class="catalog-menu__back-to-menu-btn">
+									<span class="_icon-arrow-left"></span>
+									Назад к меню
+								</button>
+							</div>
+							<div class="catalog-menu__category" data-category="audio-video-cables">
+								<a href="#" class="catalog-menu__category-link">
+									<span class="catalog-menu__category-icon">
+										<span class="_icon-cable"></span>
+									</span>
+									<span class="catalog-menu__category-title">Кабели для аудио и видео</span>
+									<span class="catalog-menu__category-arrow">
+										<span class="_icon-arrow-right"></span>
+									</span>
+								</a>
+							</div>
+							<div class="catalog-menu__category" data-category="wireless-sound">
+								<a href="#" class="catalog-menu__category-link">
+									<span class="catalog-menu__category-icon">
+										<span class="_icon-wireless"></span>
+									</span>
+									<span class="catalog-menu__category-title">Беспроводной звук</span>
+									<span class="catalog-menu__category-arrow">
+										<span class="_icon-arrow-right"></span>
+									</span>
+								</a>
+							</div>
+							<div class="catalog-menu__category" data-category="vinyl-everything">
+								<a href="#" class="catalog-menu__category-link">
+									<span class="catalog-menu__category-icon">
+										<span class="_icon-vinyl"></span>
+									</span>
+									<span class="catalog-menu__category-title">Все для винила</span>
+									<span class="catalog-menu__category-arrow">
+										<span class="_icon-arrow-right"></span>
+									</span>
+								</a>
+							</div>
+							<div class="catalog-menu__category" data-category="accessories">
+								<a href="#" class="catalog-menu__category-link">
+									<span class="catalog-menu__category-icon">
+										<span class="_icon-tools"></span>
+									</span>
+									<span class="catalog-menu__category-title">Аксессуары</span>
+									<span class="catalog-menu__category-arrow">
+										<span class="_icon-arrow-right"></span>
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="catalog-menu__subcategories">
+							<!-- Кнопка "Назад" -->
+							<div class="catalog-menu__back-button">
+								<button type="button" class="catalog-menu__back-btn">
+									<span class="_icon-arrow-left"></span>
+									Назад к категориям
+								</button>
+							</div>
+							<div class="catalog-menu__subcategory-panel" data-subcategory-panel="audio-video-cables">
+								<ul class="catalog-menu__subcategory-columns">
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Акустические</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Межблочные</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Для проигрывателей винила</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Переходники mini-jack 3.5 mm</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Адаптеры DIN и другие</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Цифровые S/PDIF</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Оптические Toslink</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Сабвуферные</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Силовые (Сетевые)</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Для наушников</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">HDMI</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">DisplayPort</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Lan</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">USB</a>
+									</li>
+								</ul>
+							</div>
+							<div class="catalog-menu__subcategory-panel" data-subcategory-panel="wireless-sound">
+								<ul class="catalog-menu__subcategory-columns">
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Bluetooth наушники</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">WiFi системы</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Адаптеры</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Аксессуары</a>
+									</li>
+								</ul>
+							</div>
+							<div class="catalog-menu__subcategory-panel" data-subcategory-panel="vinyl-everything">
+								<ul class="catalog-menu__subcategory-columns">
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Проигрыватели</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Картриджи</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Иглы</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Аксессуары</a>
+									</li>
+								</ul>
+							</div>
+							<div class="catalog-menu__subcategory-panel" data-subcategory-panel="accessories">
+								<ul class="catalog-menu__subcategory-columns">
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Адаптеры</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Акустические терминалы</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Аппаратные разъемы RCA, XLR</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Разъемы бананы, лопатки, пины</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Разъемы RCA, XLR, BNC, DIN</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Разъемы mini-jack и прочее</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Сетевые аппаратные разъемы</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Сетевые коннекторы и розетки</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Сетевые дистрибьюторы и фильтры</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Сетевые кондиционеры</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Для наушников</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Системы виброразвязки</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Перемычки</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Приборы для аудио</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Средства для ухода</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">Припой серебросодержащий</a>
+									</li>
+									<li class="catalog-menu__subcategory-item">
+										<a href="#" class="catalog-menu__subcategory-link">DIY материалы и прочее</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="page page--info">
+				<div class="breadcrumbs">
+					<div class="breadcrumbs__container">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a href="index.html" class="breadcrumbs__link">Главная</a>
+							</li>
+							<li class="breadcrumbs__item active">
+								<a href="#" class="breadcrumbs__link">Гарантии</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<section class="info-page">
+					<div class="info-page__container">
+						<div class="info-page__card">
+							<div class="info-page__banner">
+								<picture>
+									<source srcset="./assets/img/warranty/warranty-banner.jpg" media="(width >= 600px)">
+									<img src="./assets/img/warranty/warranty-banner-mob.png" alt="Гарантийный лист iProstir">
+								</picture>
+							</div>
+							<div class="info-page__content">
+								<p>
+									Наши клиенты имеют право обменять товар надлежащего качества в течение четырнадцати дней, не считая дня покупки (статья №9 Закона Украины «О защите прав потребителей») при условии сохранения его товарного вида, потребительских свойств, пломб, ярлыков, сохранности целостности упаковки, в том числе при отсутствии повреждений блистерной упаковки и заплавленных пакетов. Эти условия распространяются на все стандартные кабели и другие товары, представленные на нашем сайте. Все названия товаров на сайте оригинальные, любые артикулы и коды товаров предназначены для внутреннего использования, любые совпадения случайны.
+								</p>
+								<div class="info-page__highlight">
+									<div class="info-page__highlight-icon">
+										<img src="./assets/img/warranty/cabel.png" alt="Кабельная продукция">
+									</div>
+									<div class="info-page__highlight-content">
+										<h3 class="title-h2">
+											КАБЕЛЬНАЯ ПРОДУКЦИЯ НА ОТРЕЗ ИЛИ РАЗДЕЛАННАЯ ПО ИНДИВИДУАЛЬНОМУ ЗАКАЗУ НЕ ПОДПАДАЕТ ПОД ДЕЙСТВИЕ СТАТЬИ №9 ЗАКОНА УКРАИНЫ
+											<a href="#" class="link-primary">«О ЗАЩИТЕ ПРАВ ПОТРЕБИТЕЛЕЙ»</a>
+										</h3>
+										<p>
+											Так как является «погонажными ... материалами ... нарезанными или раскроенными под размер, определенный покупателем (заказчиком)...». Таким образом, кабели на отрез и другая продукция, изготовленная специально для заказчика и под конкретные задачи, обмену и возврату не подлежит.
+										</p>
+									</div>
+								</div>
+								<div class="info-page__two-cols">
+									<div class="info-page__col">
+										<p>
+											При возврате товара надлежащего качества по личным причинам (не понравилось, не тот цвет и т.д.) покупатель несет расходы по оплате стоимости первичной и обратной доставки согласно действующим тарифам службы доставки. Продавец возвращает покупателю непосредственную стоимость товара, то есть полную стоимость, указанную на сайте, за вычетом транспортных расходов, а также различных комиссий за перевод денежных средств. Посылка на возврат не должна быть оформлена наложенным платежом! Такие посылки не могут быть нами приняты и будут возвращены покупателю. В случае повреждений, полученных при перевозке, претензию необходимо предъявить компании-перевозчику.
+										</p>
+										<p>
+											На изготовленную в нашей мастерской продукцию распространяется гарантия один год, при условии правильной ее эксплуатации по назначению. На отремонтированные изделия любых других производителей распространяется гарантия тридцать календарных дней.
+										</p>
+									</div>
+									<div class="info-page__col">
+										<figure class="info-page__figure">
+											<img src="./assets/img/warranty/warranty-parcel.jpg" alt="Доставка и возврат товара">
+										</figure>
+									</div>
+								</div>
+								<div class="info-page__warning">
+									<div class="info-page__warning-inner">
+										<span class="info-page__warning-label">ВНИМАНИЕ:</span>
+										<p>
+											изменение характера звучания кабеля после ремонта или модернизации не является основанием для предъявления претензий и требований полного или частичного возврата денег за проделанную работу и использованные материалы.
+										</p>
+									</div>
+								</div>
+								<div class="info-page__two-cols info-page__two-cols--reverse">
+									<div class="info-page__col">
+										<figure class="info-page__figure">
+											<img src="./assets/img/warranty/warranty-repair.png" alt="Ремонт кабелей">
+										</figure>
+									</div>
+									<div class="info-page__col">
+										<p>
+											При ремонте изделий (кабелей) сторонних производителей с неразборными коннекторами, которые не подлежат вскрытию, не гарантируется отсутствие следов ремонта и вскрытия, а также неизменность целостности и внешнего вида после восстановления работоспособности изделия.
+										</p>
+										<h4>Гарантия не распространяется на кабели:</h4>
+										<ul class="info-page__checklist">
+											<li>
+												со следами механических, электрических, термальных, химических или других повреждений;
+											</li>
+											<li>подвергшиеся стороннему вмешательству (модернизация, ремонт, апгрейд и т.д.);</li>
+											<li>испорченные детьми или домашними животными.</li>
+										</ul>
+										<h4>Прослушивание кабелей</h4>
+										<p>
+											Предлагаем возможность прослушивания выбранных кабелей на дому под залог полной стоимости. Вы можете взять несколько кабелей и комфортно прослушать их в своей системе, оценив все достоинства и недостатки звучания и, по итогам прослушивания, выбрать наиболее подходящий вариант.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<div class="page-controls">
+				<button type="button" class="button-to-top">
+					<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewbox="0 0 10 6" fill="none">
+						<path d="M0.0999203 5.31473L0.600887 5.81566C0.667641 5.88255 0.744537 5.91589 0.831471 5.91589C0.918195 5.91589 0.995056 5.88255 1.06181 5.81566L4.99995 1.87773L8.93791 5.81555C9.0047 5.88245 9.08156 5.91579 9.16839 5.91579C9.25525 5.91579 9.33211 5.88245 9.39887 5.81555L9.89976 5.31459C9.96666 5.24783 10 5.17097 10 5.08411C10 4.99731 9.96655 4.92045 9.89976 4.8537L5.23043 0.184258C5.16367 0.117469 5.08678 0.0840921 4.99995 0.0840921C4.91312 0.0840921 4.83636 0.117469 4.76964 0.184258L0.0999203 4.8537C0.0331669 4.92049 1.90735e-06 4.99735 1.90735e-06 5.08411C1.90735e-06 5.17097 0.0331669 5.24783 0.0999203 5.31473Z" fill="#3164B9"></path>
+					</svg>
+				</button>
+			</div>
+			<footer data-footer="" class="footer">
+				<div class="footer__container">
+					<div class="footer__content">
+						<div class="footer__columns">
+							<!-- Логотип и соцсети -->
+							<div class="footer__column footer__column--logo">
+								<a href="#" class="footer__logo">
+									<img src="./assets/img/logo-white.png" alt="Logo">
+									<div class="footer__logo-tagline">
+										Кабели и аксессуары
+										<span class="blue">для аудио</span>
+										<span class="red">и видео</span>
+									</div>
+								</a>
+								<div class="footer__social">
+									<a href="#" class="footer__social-link footer__social-link--facebook">
+										<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30" fill="none">
+											<g clip-path="url(#clip0_30_140)">
+												<rect x="3" y="1" width="24" height="29" rx="5" fill="white"></rect>
+												<path d="M25.9572 0H4.04265C1.81005 0 9.15527e-05 1.80989 9.15527e-05 4.04256V25.9573C9.15527e-05 28.19 1.80998 29.9999 4.04265 29.9999H14.8508L14.8692 19.2795H12.0841C11.7222 19.2795 11.4284 18.9869 11.427 18.6249L11.4136 15.1693C11.4122 14.8054 11.7069 14.5096 12.0708 14.5096H14.8509V11.1706C14.8509 7.29576 17.2174 5.18587 20.6741 5.18587H23.5105C23.8734 5.18587 24.1677 5.48008 24.1677 5.84305V8.75684C24.1677 9.11967 23.8736 9.4138 23.5109 9.41402L21.7702 9.41483C19.8904 9.41483 19.5263 10.3081 19.5263 11.619V14.5097H23.657C24.0506 14.5097 24.3559 14.8534 24.3095 15.2442L23.9 18.6998C23.8608 19.0305 23.5804 19.2797 23.2474 19.2797H19.5448L19.5263 30H25.9574C28.19 30 29.9999 28.1901 29.9999 25.9575V4.04256C29.9998 1.80989 28.1899 0 25.9572 0Z" fill="#4267E1"></path>
+											</g>
+											<defs>
+												<clipPath id="clip0_30_140">
+													<rect width="30" height="30" fill="white"></rect>
+												</clipPath>
+											</defs>
+										</svg>
+									</a>
+									<a href="#" class="footer__social-link footer__social-link--instagram">
+										<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30" fill="none">
+											<g clip-path="url(#clip0_30_158)">
+												<path d="M1.87499 2.04137C-0.48251 4.49012 -1.03265e-05 7.09137 -1.03265e-05 14.9939C-1.03265e-05 21.5564 -1.14501 28.1351 4.84749 29.6839C6.71874 30.1651 23.2987 30.1651 25.1675 29.6814C27.6625 29.0376 29.6925 27.0139 29.97 23.4851C30.0087 22.9926 30.0087 7.00387 29.9687 6.50137C29.6737 2.74262 27.36 0.576369 24.3112 0.137619C23.6125 0.036369 23.4725 0.00636903 19.8875 0.00011903C7.17124 0.00636903 4.38374 -0.559881 1.87499 2.04137Z" fill="url(#paint0_linear_30_158)"></path>
+												<path d="M14.9975 3.92378C10.4588 3.92378 6.14876 3.52003 4.50251 7.74503C3.82251 9.49003 3.92126 11.7563 3.92126 15.0013C3.92126 17.8488 3.83001 20.525 4.50251 22.2563C6.14501 26.4838 10.49 26.0788 14.995 26.0788C19.3413 26.0788 23.8225 26.5313 25.4888 22.2563C26.17 20.4938 26.07 18.2613 26.07 15.0013C26.07 10.6738 26.3088 7.88003 24.21 5.78253C22.085 3.65753 19.2113 3.92378 14.9925 3.92378H14.9975ZM14.005 5.92003C23.4725 5.90503 24.6775 4.85253 24.0125 19.4738C23.7763 24.645 19.8388 24.0775 14.9988 24.0775C6.17376 24.0775 5.92001 23.825 5.92001 14.9963C5.92001 6.06503 6.62001 5.92503 14.005 5.91753V5.92003ZM20.91 7.75878C20.1763 7.75878 19.5813 8.35378 19.5813 9.08753C19.5813 9.82128 20.1763 10.4163 20.91 10.4163C21.6438 10.4163 22.2388 9.82128 22.2388 9.08753C22.2388 8.35378 21.6438 7.75878 20.91 7.75878ZM14.9975 9.31253C11.8563 9.31253 9.31001 11.86 9.31001 15.0013C9.31001 18.1425 11.8563 20.6888 14.9975 20.6888C18.1388 20.6888 20.6838 18.1425 20.6838 15.0013C20.6838 11.86 18.1388 9.31253 14.9975 9.31253ZM14.9975 11.3088C19.8788 11.3088 19.885 18.6938 14.9975 18.6938C10.1175 18.6938 10.11 11.3088 14.9975 11.3088Z" fill="white"></path>
+											</g>
+											<defs>
+												<linearGradient id="paint0_linear_30_158" x1="1.93251" y1="28.084" x2="29.8143" y2="3.95259" gradientunits="userSpaceOnUse">
+													<stop stop-color="#FFDD55"></stop>
+													<stop offset="0.5" stop-color="#FF543E"></stop>
+													<stop offset="1" stop-color="#C837AB"></stop>
+												</linearGradient>
+												<clipPath id="clip0_30_158">
+													<rect width="30" height="30" fill="white"></rect>
+												</clipPath>
+											</defs>
+										</svg>
+									</a>
+									<a href="#" class="footer__social-link footer__social-link--youtube">
+										<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewbox="0 0 30 30" fill="none">
+											<g clip-path="url(#clip0_101_1787)">
+												<path d="M30 0H0V30H30V0Z" fill="#EE2525"></path>
+												<path d="M17.3299 19.204C17.3292 19.0921 17.2963 18.9755 17.2548 18.8709C17.1995 18.7333 17.0811 18.6648 16.9323 18.6504C16.7578 18.6332 16.6183 18.7037 16.4919 18.8156C16.4412 18.8597 16.4182 18.9255 16.4182 18.9255L16.4208 22.4783V22.5658C16.4208 22.5658 16.4511 22.6066 16.4557 22.6119C16.5584 22.7232 16.6782 22.8114 16.8316 22.843C17.0843 22.895 17.2627 22.7896 17.3121 22.5553C17.3246 22.4967 17.3319 22.4361 17.3319 22.3762C17.3332 21.3184 17.3352 20.2612 17.3299 19.204ZM17.3299 19.204C17.3292 19.0921 17.2963 18.9755 17.2548 18.8709C17.1995 18.7333 17.0811 18.6648 16.9323 18.6504C16.7578 18.6332 16.6183 18.7037 16.4919 18.8156C16.4412 18.8597 16.4182 18.9255 16.4182 18.9255L16.4208 22.4783V22.5658C16.4208 22.5658 16.4511 22.6066 16.4557 22.6119C16.5584 22.7232 16.6782 22.8114 16.8316 22.843C17.0843 22.895 17.2627 22.7896 17.3121 22.5553C17.3246 22.4967 17.3319 22.4361 17.3319 22.3762C17.3332 21.3184 17.3352 20.2612 17.3299 19.204ZM21.3079 13.8462C17.1034 13.756 12.897 13.756 8.6919 13.8462C7.23314 13.8771 6.06667 15.07 6.06667 16.5294V23.0964C6.06667 24.5565 7.23314 25.7493 8.6919 25.7802C12.897 25.8704 17.1034 25.8704 21.3079 25.7802C22.7673 25.7493 23.9338 24.5565 23.9338 23.0964V16.5294C23.9338 15.07 22.7673 13.8771 21.3079 13.8462ZM9.92684 23.6948H8.71428V16.8401H7.45893V15.6934H11.1848V16.8375H9.92684V23.6948ZM14.2662 20.8497V23.6954H13.1926V23.0451C13.1537 23.0865 13.132 23.1089 13.1116 23.1319C12.8806 23.3926 12.6186 23.6099 12.2841 23.7251C12.1209 23.781 11.953 23.8001 11.7812 23.7705C11.5469 23.7316 11.3895 23.5967 11.2947 23.3834C11.2065 23.1866 11.1842 22.9759 11.1835 22.764C11.1809 21.9806 11.1822 17.8347 11.1822 17.7946H12.2532C12.2552 17.8308 12.2591 20.8069 12.2598 22.2584C12.2598 22.3374 12.2605 22.4184 12.2762 22.4954C12.3157 22.6902 12.4652 22.7738 12.6528 22.7054C12.8687 22.6264 13.0333 22.4776 13.1715 22.2992C13.1919 22.2735 13.1919 22.2275 13.1919 22.1906V17.788L14.2662 17.7854C14.2662 17.7854 14.2662 19.8636 14.2662 20.8497ZM18.3509 23.1267C18.2074 23.5585 17.8914 23.7784 17.4372 23.7738C17.0679 23.7705 16.7684 23.6237 16.5215 23.3558C16.4939 23.3261 16.4175 23.2452 16.4175 23.2452V23.6941H15.3419V15.6927H16.4175C16.4175 16.5445 16.4175 18.3265 16.4175 18.3265C16.4175 18.3265 16.4781 18.2054 16.5334 18.1428C16.6999 17.9565 16.9027 17.8124 17.1528 17.7492C17.5656 17.6458 18.0415 17.7735 18.2679 18.256C18.4016 18.5411 18.4391 18.8452 18.4391 19.1546C18.4411 20.273 18.4411 21.3914 18.4398 22.5099C18.4391 22.7192 18.4174 22.926 18.3509 23.1267ZM22.3236 22.9016C22.1373 23.4473 21.7522 23.7501 21.1874 23.8331C20.8372 23.8844 20.4903 23.8772 20.1618 23.7284C19.7122 23.5257 19.4575 23.159 19.3482 22.6923C19.2975 22.475 19.2725 22.2473 19.2698 22.0241C19.2613 21.1479 19.2652 20.2711 19.2672 19.3949C19.2679 18.9368 19.3771 18.5142 19.6911 18.1633C20.0493 17.7624 20.5074 17.613 21.0308 17.6465C21.1881 17.6564 21.3487 17.6821 21.4981 17.7315C22.007 17.8987 22.2789 18.2798 22.3855 18.7854C22.4263 18.9802 22.4415 19.1823 22.4447 19.3818C22.4533 19.8492 22.4415 20.8794 22.4415 20.8794H20.3817V22.3559C20.3817 22.6212 20.5963 22.8358 20.8616 22.8358C21.1262 22.8358 21.3408 22.6212 21.3408 22.3559V21.5969H22.4474C22.4474 21.5968 22.4638 22.4928 22.3236 22.9016ZM21.3408 19.1349C21.3408 18.8703 21.1262 18.655 20.8616 18.655C20.5963 18.655 20.3817 18.8703 20.3817 19.1349V19.9637H21.3408V19.1349ZM17.2548 18.8709C17.1995 18.7334 17.0811 18.6649 16.9323 18.6504C16.7578 18.6333 16.6183 18.7037 16.4919 18.8156C16.4412 18.8598 16.4182 18.9256 16.4182 18.9256L16.4208 22.4783V22.5659C16.4208 22.5659 16.4511 22.6067 16.4557 22.612C16.5584 22.7232 16.6782 22.8114 16.8316 22.843C17.0843 22.895 17.2627 22.7897 17.3121 22.5554C17.3246 22.4968 17.3319 22.4362 17.3319 22.3763C17.3332 21.3184 17.3352 20.2612 17.3299 19.204C17.3292 19.0921 17.2963 18.9755 17.2548 18.8709Z" fill="white"></path>
+												<path d="M20.0044 6.25293L20.004 12.1935H18.9032L18.9046 11.5553C18.7828 11.6752 18.679 11.7872 18.5648 11.8878C18.3625 12.066 18.1333 12.1989 17.8651 12.2514C17.4535 12.3319 17.1029 12.2018 16.9716 11.7755C16.9279 11.6335 16.9015 11.4804 16.9004 11.3322V6.25293H17.9929V10.7833C17.9929 10.8433 17.9977 10.904 18.0082 10.9629C18.0414 11.1496 18.1794 11.2374 18.3592 11.1751C18.5783 11.0993 18.7455 10.9475 18.8874 10.7688C18.9075 10.7432 18.9039 10.6955 18.9039 10.6581V6.25293H20.0044Z" fill="white"></path>
+												<path d="M10.8997 7.28517C10.6608 6.27793 10.1601 4.15161 10.1601 4.15161H8.90749C8.90749 4.15161 9.8699 7.34343 10.3003 8.76691C10.3158 8.81838 10.3229 8.87427 10.3229 8.92819L10.3224 12.1922H11.4775L11.477 8.92819C11.477 8.87427 11.4841 8.81838 11.4996 8.76691C11.93 7.34343 12.8924 4.15161 12.8924 4.15161H11.6398C11.6398 4.15161 11.1391 6.27793 10.9002 7.28517H10.8997Z" fill="white"></path>
+												<path d="M14.4001 6.10425C13.5296 6.10425 12.8239 6.80993 12.8239 7.68044V10.7651C12.8239 11.6356 13.5296 12.3413 14.4001 12.3413C15.2706 12.3413 15.9763 11.6356 15.9763 10.7651V7.68044C15.9763 6.80993 15.2706 6.10425 14.4001 6.10425ZM14.855 10.8274C14.855 11.0782 14.6509 11.2822 14.4001 11.2822C14.1494 11.2822 13.9453 11.0782 13.9453 10.8274V7.6181C13.9453 7.3673 14.1494 7.16329 14.4001 7.16329C14.6509 7.16329 14.855 7.36736 14.855 7.6181V10.8274Z" fill="white"></path>
+											</g>
+											<defs>
+												<clipPath id="clip0_101_1787">
+													<rect width="30" height="30" rx="4" fill="white"></rect>
+												</clipPath>
+											</defs>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<!-- Информация -->
+							<div class="footer__column">
+								<h4 class="footer__title">ИНФОРМАЦИЯ</h4>
+								<ul class="footer__list">
+									<li class="footer__item">
+										<a href="#" class="footer__link">Аудиобренды</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Стоимость услуг</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Отзывы</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Оплата и доставка</a>
+									</li>
+								</ul>
+							</div>
+							<!-- Личный кабинет -->
+							<div class="footer__column">
+								<h4 class="footer__title">ЛИЧНЫЙ КАБИНЕТ</h4>
+								<ul class="footer__list">
+									<li class="footer__item">
+										<a href="#" class="footer__link">Личный Кабинет</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">История заказов</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Закладки</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Рассылка</a>
+									</li>
+								</ul>
+							</div>
+							<!-- Поддержка -->
+							<div class="footer__column">
+								<h4 class="footer__title">ПОДДЕРЖКА</h4>
+								<ul class="footer__list">
+									<li class="footer__item">
+										<a href="#" class="footer__link">Изготовление на заказ</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Карта сайта</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Гарантии</a>
+									</li>
+								</ul>
+							</div>
+							<!-- Контакты -->
+							<div class="footer__column">
+								<h4 class="footer__title">КОНТАКТЫ</h4>
+								<ul class="footer__list">
+									<li class="footer__item">
+										<a href="tel:+380507034224" class="footer__link footer__link--contact">
+											<span class="footer__contact-icon _icon-phone"></span>
+											+38 050 703 4224
+										</a>
+									</li>
+									<li class="footer__item">
+										<a href="mailto:zakaz@iprostir.com" class="footer__link footer__link--contact">
+											<span class="footer__contact-icon _icon-mail"></span>
+											zakaz@iprostir.com
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<div class="footer__bottom">
+				<div class="footer__bottom-content">
+					<p class="footer__copyright">© iProstir.com, 2011-2021</p>
+				</div>
+			</div>
+		</div>
+		<div data-popup="auth" aria-hidden="true" class="popup popup--auth auth-popup">
+			<div data-popup-wrapper="" class="popup__wrapper">
+				<div data-popup-body="" class="popup__body popup__body--auth">
+					<button data-popup-close="" type="button" class="popup__close">
+						<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square"></path>
+							<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square"></path>
+						</svg>
+					</button>
+					<div data-popup-content="" class="popup__content popup__content--auth">
+						<div class="auth-popup">
+							<div class="auth-popup__tabs">
+								<button type="button" class="auth-popup__tab auth-popup__tab--active" data-tab="login">ВХОД</button>
+								<button type="button" class="auth-popup__tab" data-tab="register">РЕГИСТРАЦИЯ</button>
+							</div>
+							<div class="auth-popup__forms">
+								<!-- Форма входа -->
+								<form class="auth-form auth-form--login" data-form="login">
+									<div class="auth-form__field">
+										<label class="auth-form__label">
+											Введите Ваш E-Mail
+											<span class="auth-form__required">*</span>
+										</label>
+										<input data-input="" type="email" name="email" class="input" placeholder="proserega27@gmai.com" data-error="Укажите корректный адрес электронной почты">
+									</div>
+									<div class="auth-form__field">
+										<label class="auth-form__label">
+											Введите Ваш пароль
+											<span class="auth-form__required">*</span>
+										</label>
+										<div class="auth-form__password form-line--password">
+											<div>
+												<input data-input="" type="password" name="password" class="input" placeholder="**********" data-error="Введите пароль">
+												<button type="button" class="auth-form__password form-line--password-toggle" data-password-toggle="">
+													<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10 4C4 4 0.73 7.11 0 10c0.73 2.89 4 6 10 6s9.27-3.11 10-6c-0.73-2.89-4-6-10-6zm0 10c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" fill="#979797"></path>
+														<path d="M2 2l16 16" stroke="#979797" stroke-width="2" stroke-linecap="round"></path>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="auth-form__footer">
+										<button type="submit" class="auth-form__submit button button-primary button-lg">Войти</button>
+										<div class="auth-form__links">
+											<a href="#" class="auth-form__link link-hover link-primary">Забыли пароль?</a>
+										</div>
+									</div>
+									<div class="auth-popup__switch">
+										<span>Еще нет аккаунта?</span>
+										<button type="button" class="auth-popup__switch-link link-hover link-primary" data-switch-to="login">Зарегистрироваться</button>
+									</div>
+								</form>
+								<!-- Форма регистрации -->
+								<form class="auth-form auth-form--register" data-form="register" style="display: none;">
+									<div class="auth-form__field">
+										<label class="auth-form__label">
+											Введите Ваше имя
+											<span class="auth-form__required">*</span>
+										</label>
+										<input data-input="" type="text" name="name" class="input" placeholder="Ваше имя" data-error="Введите ваше имя">
+									</div>
+									<div class="auth-form__field">
+										<label class="auth-form__label">
+											Введите Ваш E-Mail
+											<span class="auth-form__required">*</span>
+										</label>
+										<input data-input="" type="email" name="email" class="input" placeholder="example@email.com" data-error="Укажите корректный адрес электронной почты">
+									</div>
+									<div class="auth-form__field">
+										<label class="auth-form__label">
+											Введите Ваш пароль
+											<span class="auth-form__required">*</span>
+										</label>
+										<div class="auth-form__password form-line--password">
+											<input data-input="" type="password" name="password" class="input" placeholder="Минимум 6 символов" data-error="Пароль должен содержать минимум 6 символов">
+											<button type="button" class="auth-form__password form-line--password-toggle" data-password-toggle="">
+												<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M10 4C4 4 0.73 7.11 0 10c0.73 2.89 4 6 10 6s9.27-3.11 10-6c-0.73-2.89-4-6-10-6zm0 10c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" fill="#979797"></path>
+													<path d="M2 2l16 16" stroke="#979797" stroke-width="2" stroke-linecap="round"></path>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<div class="auth-form__field">
+										<label class="auth-form__label">
+											Подтвердите пароль
+											<span class="auth-form__required">*</span>
+										</label>
+										<div class="auth-form__password form-line--password">
+											<input data-input="" type="password" name="password_confirm" class="input" placeholder="Повторите пароль" data-error="Пароли не совпадают">
+											<button type="button" class="auth-form__password form-line--password-toggle" data-password-toggle="">
+												<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M10 4C4 4 0.73 7.11 0 10c0.73 2.89 4 6 10 6s9.27-3.11 10-6c-0.73-2.89-4-6-10-6zm0 10c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" fill="#979797"></path>
+													<path d="M2 2l16 16" stroke="#979797" stroke-width="2" stroke-linecap="round"></path>
+												</svg>
+											</button>
+										</div>
+									</div>
+									<div class="auth-form__footer">
+										<button type="submit" class="auth-form__submit button button-primary button-lg">Зарегистрироваться</button>
+									</div>
+									<div class="auth-popup__switch">
+										<button type="button" class="auth-popup__switch-link link-hover link-primary" data-switch-to="login">Войти</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-popup="oneclick" aria-hidden="true" class="popup popup--oneclick">
+			<div data-popup-wrapper="" class="popup__wrapper">
+				<div data-popup-body="" class="popup__body">
+					<button data-popup-close="" type="button" class="popup__close">×</button>
+					<div data-popup-content="" class="popup__content">
+						<div class="oneclick-popup">
+							<h3 class="oneclick-popup__title">ЗАКАЗАТЬ В 1 КЛИК</h3>
+							<p class="oneclick-popup__subtitle">
+								Оставьте номер телефона и мы свяжемся
+								<br>
+								с Вами в ближайшее время
+							</p>
+							<form class="oneclick-form" data-oneclick-form="">
+								<div class="oneclick-form__field">
+									<label class="oneclick-form__label">
+										Введите Ваш телефон
+										<span class="oneclick-form__required">*</span>
+									</label>
+									<input data-input="" type="tel" name="phone" class="input" placeholder="+380" data-error="Введите корректный номер телефона" required>
+								</div>
+								<div class="oneclick-form__footer">
+									<button type="submit" class="button button-primary button-xl oneclick-form__submit">Отправить</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
