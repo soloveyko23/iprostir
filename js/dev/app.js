@@ -685,9 +685,18 @@ function initCatalogButton$1() {
   const isHomePage = document.querySelector(".page--home") !== null;
   const isMobile = () => window.innerWidth <= 991;
   let closeTimer = null;
+  function updateOverlayPosition() {
+    if (!headerSubcategories) return;
+    const headerBottom = document.querySelector(".header__bottom");
+    if (headerBottom) {
+      const rect = headerBottom.getBoundingClientRect();
+      headerSubcategories.style.top = rect.bottom + "px";
+    }
+  }
   function openCatalog() {
     if (!headerSubcategories) return;
     cancelCloseTimer();
+    updateOverlayPosition();
     headerSubcategories.classList.add("active");
     document.body.classList.add("catalog-open");
     document.dispatchEvent(new CustomEvent("catalog:open"));
@@ -720,9 +729,6 @@ function initCatalogButton$1() {
       startCloseTimer();
     });
     if (headerSubcategories) {
-      headerSubcategories.addEventListener("mouseenter", () => {
-        cancelCloseTimer();
-      });
       const catalogMenu = headerSubcategories.querySelector(".catalog-menu");
       if (catalogMenu) {
         catalogMenu.addEventListener("mouseenter", () => {

@@ -5760,7 +5760,7 @@ function initSliders() {
   if (document.querySelector(".compare-slider")) {
     new Swiper(".compare-slider", {
       modules: [Navigation],
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 0,
       speed: 400,
       navigation: {
@@ -5768,9 +5768,6 @@ function initSliders() {
         nextEl: ".compare-table__nav--next"
       },
       breakpoints: {
-        480: {
-          slidesPerView: 2
-        },
         768: {
           slidesPerView: 3
         }
